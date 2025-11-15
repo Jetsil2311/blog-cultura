@@ -11,7 +11,7 @@ export const Paper = ({children}) => {
     <div>
         {children}
         {/* Botón de home */}
-        <div className="fixed bottom-6 right-6">
+        <div className="fixed bottom-6 right-6 a">
           <a
             href="/"
             className=" rounded-full shadow-lg hover:bg-gray-700 transition-colors"
