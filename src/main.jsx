@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { HashRouter, Routes, Route } from 'react-router-dom'
+import { HashRouter, Routes, Route } from 'react-router'
 import { Home } from './views/Home.jsx'
 import { Paper } from './views/Paper.jsx'
 import { Artes } from './papers/Artes.jsx'
