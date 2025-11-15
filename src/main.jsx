@@ -1,7 +1,7 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import './index.css'
-import { HashRouter, Routes, Route, BrowserRouter } from 'react-router'
+import { HashRouter, Routes, Route } from 'react-router'
 import { Home } from './views/Home.jsx'
 import { Paper } from './views/Paper.jsx'
 import { Artes } from './papers/Artes.jsx'
@@ -12,7 +12,7 @@ import { Calculo } from './papers/Calculo.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <BrowserRouter>
+    <HashRouter>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/paper/artes" element={<Paper><Artes /></Paper>} />
@@ -21,6 +21,6 @@ createRoot(document.getElementById('root')).render(
         <Route path="/paper/fisica" element={<Paper><Fisica/></Paper>} />
         <Route path="/paper/calculo" element={<Paper><Calculo /></Paper>} />
       </Routes>
-    </BrowserRouter>
+    </HashRouter>
   </StrictMode>,
 )
