@@ -89,7 +89,7 @@ export default function Carousel() {
         <Link
           className="absolute top-3 right-3 z-40 px-3 py-1 text-lg font-semibold text-black bg-white/80 rounded-full shadow-md active:scale-95 transition md:hidden"
           aria-label="Add"
-            to="/paper/"
+            to={`/paper/${images[current].paper}`}
         >
           <Plus size={20} className="w-5 h-5" strokeWidth={2.5} />
         </Link>
