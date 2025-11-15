@@ -1,6 +1,10 @@
 import React, { useState, useEffect } from "react";
 import { ChevronLeft, ChevronRight, Plus } from "lucide-react";
 import { Link } from "react-router";
+import heroArtes from '../assets/hero-artes.jpeg';
+import infCult from '../assets/inf-cult.png';
+import infDer from '../assets/inf.der.jpeg';
+import infFis from '../assets/inf-fis.png';
 
 export default function Carousel() {
   const [current, setCurrent] = useState(0);
@@ -9,9 +13,11 @@ export default function Carousel() {
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   const images = [
-    { src: "https://images.unsplash.com/photo-1506744038136-46273834b3fb", label: "Mountain Vista" },
-    { src: "https://images.unsplash.com/photo-1494526585095-c41746248156", label: "Coastal Sunset" },
-    { src: "https://images.unsplash.com/photo-1519125323398-675f0ddb6308", label: "Desert Dunes" },
+    { src: heroArtes, label: "Artes", paper: "artes" },
+    { src: infCult, label: "Cultura Ambiental", paper: "cultura" },
+    { src: infDer, label: "Nociones de Derecho", paper: "derecho" },
+    { src: infFis, label: "Fisica II", paper: "fisica" },
+    { src: 'https://t3.ftcdn.net/jpg/05/52/35/58/360_F_552355848_5uctS7naH0p4vWxEbcQS9mei7OdmKe8A.jpg', label: "Cálculo Diferencial", paper: "calculo" },
   ];
 
   const next = () => {
@@ -74,7 +80,7 @@ export default function Carousel() {
 
         {/* Label - hidden on mobile */}
         <div className="absolute bottom-15 left-1/2 -translate-x-1/2 text-center z-30 hidden md:block">
-          <Link to='/paper/' className="px-6 py-3 bg-white/10 backdrop-blur-xl border border-white/20 text-white font-semibold rounded-2xl shadow-2xl text-lg sm:text-2xl transition-all duration-700">
+          <Link to={`/paper/${images[current].paper}`} className="px-6 py-3 bg-white/10 backdrop-blur-xl border border-white/20 text-white font-semibold rounded-2xl shadow-2xl text-lg sm:text-2xl transition-all duration-700">
             {images[current].label}
           </Link>
         </div>

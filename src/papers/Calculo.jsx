@@ -6,7 +6,7 @@ export const Calculo = () => {
   {/* Hero section */}
   <div className="relative w-full h-64 sm:h-80 md:h-96 lg:h-[500px] bg-gradient-to-r from-blue-500 to-purple-600 flex items-center justify-center">
     <img
-      src="https://images.unsplash.com/photo-1506744038136-46273834b3fb"
+      src="https://t3.ftcdn.net/jpg/05/52/35/58/360_F_552355848_5uctS7naH0p4vWxEbcQS9mei7OdmKe8A.jpg"
       alt="Hero Background"
       className="absolute inset-0 w-full h-full object-cover"
     />

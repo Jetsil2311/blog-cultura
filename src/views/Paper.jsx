@@ -6,10 +6,10 @@ import { Derecho } from '../papers/Derecho'
 import { Cultura } from '../papers/Cultura'
 import { Fisica } from '../papers/Fisica'
 
-export const Paper = () => {
+export const Paper = ({children}) => {
   return (
     <div>
-        <Fisica />
+        {children}
         {/* Botón de home */}
         <div className="fixed bottom-6 right-6">
           <a
